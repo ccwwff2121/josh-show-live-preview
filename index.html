@@ -220,38 +220,56 @@
       box-shadow: 0 0 8px rgba(239,68,68,0.8);
     }
     .hero-live-text {
-      color: #fca5a5; font-size: 0.6rem; font-weight: 700;
+      color: #fca5a5; font-size: 0.72rem; font-weight: 700;
       letter-spacing: 0.15em; text-transform: uppercase;
       text-shadow: 0 0 10px rgba(220,38,38,0.3);
     }
 
-    /* Logo image - MUCH SMALLER */
+    /* Logo image — enlarged */
     .hero-logo-img {
-      width: clamp(200px, 25vw, 380px); height: auto; object-fit: contain;
-      filter: drop-shadow(0 4px 18px rgba(0,0,0,0.65)) brightness(1.05);
-      margin-bottom: 0.3rem; opacity: 0;
+      width: clamp(280px, 34vw, 520px); height: auto; object-fit: contain;
+      filter: drop-shadow(0 6px 24px rgba(0,0,0,0.7)) brightness(1.08);
+      margin-bottom: 0.55rem; opacity: 0;
     }
 
-    /* Subtitle — Playfair italic gold, aligned with left column */
+    /* Subtitle — centered between the two CTA buttons */
     .hero-subtitle {
       font-family: 'Playfair Display', serif;
       font-style: italic;
-      font-size: clamp(0.9rem, 1.5vw, 1.25rem);
+      font-size: clamp(1rem, 1.7vw, 1.4rem);
       font-weight: 400;
       color: #C9A84C;
       letter-spacing: 0.02em;
       text-transform: none;
-      margin-top: -0.25rem;
-      margin-bottom: 1.2rem;
-      opacity: 0;
-      text-shadow: 0 2px 12px rgba(201,168,76,0.25);
-      align-self: flex-start;
+      margin: 0;
+      padding: 0 0.25rem;
+      text-shadow: 0 2px 14px rgba(201,168,76,0.3);
+      white-space: nowrap;
+      flex-shrink: 0;
+      align-self: center;
+      line-height: 1.2;
     }
 
-    /* CTA buttons - more compact */
+    /* CTA block — subtitle centered above both buttons */
     .hero-cta-row {
-      display: flex; flex-wrap: wrap; gap: 0.7rem;
-      align-items: center; margin-bottom: 0; opacity: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.65rem;
+      margin-bottom: 0;
+      opacity: 0;
+    }
+    /* Subtitle centered over the button row width */
+    .hero-cta-row .hero-subtitle {
+      align-self: stretch;
+      text-align: center;
+    }
+    /* Buttons side by side on their own row */
+    .hero-cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      align-items: center;
     }
     .hero-cta-primary {
       position: relative; overflow: hidden;
@@ -776,21 +794,22 @@
            alt="The Josh Guillory Show"
            loading="eager" fetchpriority="high" decoding="async">
 
-      <p class="hero-subtitle h-opacity-0 h-anim-slide-left h-delay-2">Knowledge &amp; Common Sense</p>
-
       <div class="hero-cta-row h-opacity-0 h-anim-fade-up h-delay-4">
-        <a href="https://rumble.com/c/TheJoshGuilloryShow/livestreams?e9s=src_v1_cbl"
-           target="_blank" rel="noopener noreferrer"
-           class="hero-cta-primary h-anim-pulse-glow">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-          Watch Latest Episode
-        </a>
-        <a href="#purpose" class="hero-cta-secondary">
-          <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
-          </svg>
-          Browse Episodes
-        </a>
+        <p class="hero-subtitle">Knowledge &amp; Common Sense</p>
+        <div class="hero-cta-buttons">
+          <a href="https://rumble.com/c/TheJoshGuilloryShow/livestreams?e9s=src_v1_cbl"
+             target="_blank" rel="noopener noreferrer"
+             class="hero-cta-primary h-anim-pulse-glow">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            Watch Latest Episode
+          </a>
+          <a href="#purpose" class="hero-cta-secondary">
+            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+            </svg>
+            Browse Episodes
+          </a>
+        </div>
       </div>
     </div>
 
