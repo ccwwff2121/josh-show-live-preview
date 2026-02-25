@@ -584,8 +584,8 @@
     .host-card:hover { box-shadow: 0 12px 48px rgba(0,0,0,0.55), 0 3px 14px rgba(185,28,28,0.18); transform: translateY(-2px); }
     .host-card.reverse { flex-direction: row-reverse; }
     .host-portrait-wrap { flex-shrink: 0; position: relative; }
-    .host-portrait-ring { width: 200px; height: 200px; border-radius: 50%; overflow: hidden; border: 3.5px solid #B91C1C; box-shadow: 0 0 0 5px rgba(185,28,28,0.12), 0 6px 28px rgba(0,0,0,0.35); background: #0a1a2e; }
-    .host-portrait-ring img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+    .host-portrait-ring { width: 200px; height: 200px; border-radius: 50%; overflow: hidden; border: 3.5px solid #B91C1C; box-shadow: 0 0 0 5px rgba(185,28,28,0.12), 0 6px 28px rgba(0,0,0,0.35); background: #0a1a2e; display: block; }
+    .host-portrait-ring img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
     .host-role-badge { position: absolute; bottom: -0.4rem; left: 50%; transform: translateX(-50%); background: #B91C1C; color: white; font-size: 0.55rem; font-weight: 900; letter-spacing: 0.18em; text-transform: uppercase; padding: 0.25rem 0.9rem; white-space: nowrap; }
     .host-info { flex: 1; }
     .host-meta { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-bottom: 0.85rem; }
@@ -607,16 +607,26 @@
     /* CTA SECTION */
     #cta {
       position: relative; overflow: hidden;
-      padding: 3.5rem 1.5rem; text-align: center;
+      padding: 5rem 1.5rem; text-align: center;
     }
     .cta-bg {
       position: absolute; inset: 0;
-      background: linear-gradient(135deg, #0a0e1a 0%, #141c2e 50%, #1a2438 100%);
+      background-image: url('Assets/images/cta/LafayetteCity.jpg'), url('Assets/images/cta/city-bg.jpg'), url('Assets/images/LafayetteCity.jpg');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-color: #08122a;
       z-index: 0;
     }
+    /* Dark navy overlay so text stays readable over the city photo */
     .cta-overlay {
       position: absolute; inset: 0;
-      background: radial-gradient(ellipse at center, rgba(185,28,28,0.08), transparent 70%);
+      background: linear-gradient(
+        to bottom,
+        rgba(8,18,42,0.82) 0%,
+        rgba(8,18,42,0.72) 50%,
+        rgba(8,18,42,0.88) 100%
+      );
       z-index: 1; pointer-events: none;
     }
     .cta-content { position: relative; z-index: 2; max-width: 750px; margin: 0 auto; }
@@ -625,7 +635,7 @@
       font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 800;
       color: white; margin-bottom: 1rem; line-height: 1.2;
     }
-    .cta-title span { color: #C9A84C; }
+    .cta-title span { color: #B91C1C; }
     .cta-desc {
       font-size: 1.05rem; color: rgba(255,255,255,0.65);
       line-height: 1.7; margin-bottom: 2rem;
@@ -929,20 +939,21 @@
     <article class="host-card reverse">
       <div class="host-portrait-wrap">
         <div class="host-portrait-ring">
-          <img loading="lazy" decoding="async" src="Assets/images/Host Pics/Bernadette.jpeg" alt="Bernadette Lee">
+          <img loading="lazy" decoding="async" src="Assets/images/Host Pics/Jamie.jpeg" alt="Jamie Angelle">
         </div>
         <div class="host-role-badge">Co-Host</div>
       </div>
       <div class="host-info">
         <div class="host-meta">
-          <span>Former State Representative</span>
-          <span>Community Advocate</span>
-          <span>Policy Expert</span>
+          <span>Cajun Native</span>
+          <span>Army Veteran</span>
+          <span>Broadcast Journalist</span>
+          <span>St. Martin Parish, LA</span>
         </div>
-        <h3 class="host-name">Bernadette Lee</h3>
+        <h3 class="host-name">Jamie Angelle</h3>
         <div class="host-bio">
-          <p>Bernadette Lee brings sharp political insight and years of legislative experience to every conversation. As a former Louisiana State Representative, she has firsthand knowledge of how laws are made and how they impact communities across the state.</p>
-          <p>Her expertise in education policy, economic development, and community building makes her an invaluable voice on the show. Bernadette's ability to break down complex policy matters into practical terms helps listeners understand the real-world implications of political decisions.</p>
+          <p>Jamie Angelle is a true Cajun, born and raised in St. Martin Parish. He spent the past four years at the Lafayette Consolidated Government as Chief Communications Officer and then Deputy Chief of Staff.</p>
+          <p>Jamie lives in the Cecilia area with his wife, three daughters, one son, two dogs, and three cats. You can usually find him grilling, cooking, or watching the news in his free time.</p>
         </div>
       </div>
     </article>
@@ -950,20 +961,20 @@
     <article class="host-card">
       <div class="host-portrait-wrap">
         <div class="host-portrait-ring">
-          <img loading="lazy" decoding="async" src="Assets/images/Host Pics/Robert.jpeg" alt="Robert Judice">
+          <img loading="lazy" decoding="async" src="Assets/images/Host Pics/MarthaJean.jpeg" alt="Martha Jean">
         </div>
         <div class="host-role-badge">Co-Host</div>
       </div>
       <div class="host-info">
         <div class="host-meta">
-          <span>Attorney at Law</span>
-          <span>Legal Analyst</span>
-          <span>Constitutional Scholar</span>
+          <span>Louisiana Native</span>
+          <span>Community Voice</span>
+          <span>Show Co-Host</span>
         </div>
-        <h3 class="host-name">Robert Judice</h3>
+        <h3 class="host-name">Martha Jean</h3>
         <div class="host-bio">
-          <p>Robert Judice provides the legal perspective that grounds the show's discussions in constitutional principles and the rule of law. As an experienced attorney, Robert helps listeners understand the legal implications of current events and policy debates.</p>
-          <p>His passion for the Constitution and individual rights shines through in every analysis. Robert's ability to explain complex legal concepts in accessible terms makes him an essential part of the show's commitment to educating and empowering its audience.</p>
+          <p>Martha Jean brings a wealth of experience and a unique perspective to The Josh Guillory Show. Her engaging presence and sharp commentary make her an essential voice on the program.</p>
+          <p>With deep roots in Louisiana and a passion for community, Martha Jean connects with audiences across Acadiana and beyond, bringing warmth and authenticity to every conversation.</p>
         </div>
       </div>
     </article>
