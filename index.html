@@ -1,10 +1,12 @@
-<html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Josh Guillory Show</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,400;1,600&amp;family=Lato:wght@300;400;700;900&amp;family=Oswald:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,400;1,600&family=Lato:wght@300;400;700;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -193,7 +195,7 @@
     }
 
     /* Live badge - smaller */
-    .hero-live-badge-wrap { margin-bottom: 0.75rem; opacity: 0; }
+    .hero-live-badge-wrap { margin-bottom: 0.4rem; opacity: 0; }
     .hero-live-badge {
       display: inline-flex; align-items: center; gap: 0.4rem;
       padding: 0.35rem 0.85rem;
@@ -227,7 +229,7 @@
     .hero-logo-img {
       width: clamp(280px, 34vw, 520px); height: auto; object-fit: contain;
       filter: drop-shadow(0 6px 24px rgba(0,0,0,0.7)) brightness(1.08);
-      margin-bottom: 0.55rem; opacity: 0;
+      margin-bottom: -3.2rem; opacity: 0;
     }
 
     /* Subtitle — centered between the two CTA buttons */
@@ -241,7 +243,7 @@
       text-transform: none;
       margin: 0;
       padding: 0 0.25rem;
-      text-shadow: 0 2px 14px rgba(201,168,76,0.3);
+      text-shadow: 0 2px 14px rgba(201, 168, 76, 0.3);
       white-space: nowrap;
       flex-shrink: 0;
       align-self: center;
@@ -253,8 +255,9 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      gap: 0.65rem;
+      gap: 0.35rem;
       margin-bottom: 0;
+      margin-top: 0.2rem;
       opacity: 0;
     }
     /* Subtitle centered over the button row width */
@@ -266,7 +269,7 @@
     .hero-cta-buttons {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.85rem;
+      gap: 0.7rem;
       align-items: center;
     }
     .hero-cta-primary {
@@ -278,10 +281,11 @@
       letter-spacing: 0.13em; text-transform: uppercase;
       clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
       box-shadow:
-        0 4px 14px rgba(220,38,38,0.65),
-        0 0 30px rgba(220,38,38,0.3),
+        0 4px 18px rgba(220,38,38,0.75),
+        0 0 38px rgba(220,38,38,0.45),
         0 1px 0 rgba(255,255,255,0.2) inset,
-        0 8px 32px rgba(0,0,0,0.5);
+        0 10px 40px rgba(0,0,0,0.65),
+        0 2px 8px rgba(0,0,0,0.8);
       transition: transform 0.2s, box-shadow 0.3s;
     }
     .hero-cta-primary::before {
@@ -295,8 +299,9 @@
     .hero-cta-primary:hover { 
       transform: translateY(-3px);
       box-shadow: 
-        0 6px 15px rgba(220,38,38,0.6), 
-        0 0 35px rgba(220,38,38,0.3),
+        0 8px 22px rgba(220,38,38,0.8), 
+        0 0 45px rgba(220,38,38,0.5),
+        0 12px 48px rgba(0,0,0,0.7),
         inset 0 1px 0 rgba(255,255,255,0.2);
     }
     .hero-cta-primary:hover::before { opacity: 1; }
@@ -312,7 +317,9 @@
       border: 1.5px solid rgba(156,163,175,0.5);
       clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
       box-shadow:
-        0 4px 16px rgba(0,0,0,0.55),
+        0 4px 20px rgba(0,0,0,0.7),
+        0 8px 32px rgba(0,0,0,0.55),
+        0 0 18px rgba(255,255,255,0.06),
         0 0 0 1px rgba(255,255,255,0.06) inset;
       transition: all 0.2s;
       backdrop-filter: blur(6px);
@@ -322,7 +329,10 @@
       color: #f59e0b;
       background: rgba(31,41,55,0.6);
       transform: translateY(-3px);
-      box-shadow: 0 4px 12px rgba(245,158,11,0.15);
+      box-shadow:
+        0 6px 24px rgba(0,0,0,0.75),
+        0 10px 36px rgba(0,0,0,0.55),
+        0 0 22px rgba(245,158,11,0.25);
     }
     .hero-cta-secondary svg { width: 0.9rem; height: 0.9rem; stroke: currentColor; fill: none; flex-shrink: 0; }
 
@@ -494,28 +504,28 @@
     .video-wrapper { position: relative; width: 100%; max-width: 480px; }
     .video-shadow-ring {
       position: absolute; inset: 8px -18px -32px 8px;
-      background: rgba(3,8,20,0.95); border-radius: 8px;
-      filter: blur(32px); z-index: 0;
+      background: rgba(185,28,28,0.35); border-radius: 8px;
+      filter: blur(38px); z-index: 0;
     }
-    /* Extra glow halo behind the video for the pop-out effect */
+    /* Bright red glow halo behind the video */
     .video-wrapper::before {
       content: '';
       position: absolute;
-      inset: -10px -14px -20px -14px;
-      background: radial-gradient(ellipse at 50% 60%, rgba(185,28,28,0.22) 0%, rgba(0,0,0,0) 70%);
-      border-radius: 10px;
+      inset: -16px -20px -28px -20px;
+      background: radial-gradient(ellipse at 50% 60%, rgba(220,38,38,0.55) 0%, rgba(185,28,28,0.18) 45%, rgba(0,0,0,0) 75%);
+      border-radius: 12px;
       z-index: 0;
       pointer-events: none;
-      filter: blur(8px);
+      filter: blur(12px);
     }
     .video-frame-wrap {
       position: relative; z-index: 1; border-radius: 5px; overflow: hidden;
-      border: 1.5px solid rgba(185,28,28,0.5);
+      border: 2px solid rgba(220,38,38,0.7);
       box-shadow:
-        0 3px 0 rgba(185,28,28,0.45),
+        0 0 0 4px rgba(185,28,28,0.25),
+        0 0 40px rgba(220,38,38,0.5),
         0 12px 50px rgba(0,0,0,0.9),
-        0 28px 80px rgba(0,0,0,0.7),
-        0 0 0 1px rgba(255,255,255,0.04);
+        0 28px 80px rgba(0,0,0,0.7);
       aspect-ratio: 16/9; background: #000;
       filter: brightness(1.08) contrast(1.03);
       transform: translateY(0);
@@ -524,10 +534,10 @@
     .video-frame-wrap:hover {
       transform: translateY(-8px);
       box-shadow:
-        0 3px 0 rgba(185,28,28,0.55),
+        0 0 0 4px rgba(185,28,28,0.35),
+        0 0 60px rgba(220,38,38,0.65),
         0 18px 60px rgba(0,0,0,0.95),
-        0 36px 90px rgba(0,0,0,0.75),
-        0 0 30px rgba(185,28,28,0.12);
+        0 36px 90px rgba(0,0,0,0.75);
       filter: brightness(1.12) contrast(1.04);
     }
     .video-frame-wrap iframe { width: 100%; height: 100%; border: none; display: block; }
@@ -575,11 +585,23 @@
     .hosts-list { max-width: 1500px; margin: 0 auto; display: flex; flex-direction: column; gap: 3rem; }
     .host-card {
       display: flex; gap: 2.5rem; align-items: flex-start; padding: 2rem;
-      border: 1px solid rgba(255,255,255,0.06); background: rgba(255,255,255,0.018);
-      box-shadow: 0 6px 32px rgba(0,0,0,0.4), 0 2px 10px rgba(0,0,0,0.25);
+      border: 1px solid rgba(201,168,76,0.2); background: rgba(255,255,255,0.018);
+      box-shadow:
+        0 0 0 1px rgba(201,168,76,0.12),
+        0 6px 32px rgba(0,0,0,0.5),
+        0 2px 10px rgba(0,0,0,0.3),
+        0 0 40px rgba(201,168,76,0.12),
+        0 8px 28px rgba(201,168,76,0.1);
       transition: box-shadow 0.3s, transform 0.3s;
     }
-    .host-card:hover { box-shadow: 0 12px 48px rgba(0,0,0,0.55), 0 3px 14px rgba(185,28,28,0.18); transform: translateY(-2px); }
+    .host-card:hover {
+      box-shadow:
+        0 0 0 1px rgba(201,168,76,0.3),
+        0 12px 48px rgba(0,0,0,0.6),
+        0 0 55px rgba(201,168,76,0.22),
+        0 10px 36px rgba(201,168,76,0.18);
+      transform: translateY(-3px);
+    }
     .host-card.reverse { flex-direction: row-reverse; }
     .host-portrait-wrap { flex-shrink: 0; position: relative; }
     .host-portrait-ring { width: 200px; height: 200px; border-radius: 50%; overflow: hidden; border: 3.5px solid #B91C1C; box-shadow: 0 0 0 5px rgba(185,28,28,0.12), 0 6px 28px rgba(0,0,0,0.35); background: #0a1a2e; display: block; }
@@ -761,7 +783,7 @@
     </nav>
     <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-        <line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line>
+        <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
       </svg>
     </button>
   </div>
@@ -797,18 +819,23 @@
         </div>
       </div>
 
-      <img class="hero-logo-img h-opacity-0 h-anim-slide-left h-delay-1" src="Assets/images/Logo/upscalemedia-transformed.png" alt="The Josh Guillory Show" loading="eager" fetchpriority="high" decoding="async">
+      <img class="hero-logo-img h-opacity-0 h-anim-slide-left h-delay-1"
+           src="Assets/images/Logo/upscalemedia-transformed.png"
+           alt="The Josh Guillory Show"
+           loading="eager" fetchpriority="high" decoding="async">
 
       <div class="hero-cta-row h-opacity-0 h-anim-fade-up h-delay-4">
         <p class="hero-subtitle">Knowledge &amp; Common Sense</p>
         <div class="hero-cta-buttons">
-          <a href="https://rumble.com/c/TheJoshGuilloryShow/livestreams?e9s=src_v1_cbl" target="_blank" rel="noopener noreferrer" class="hero-cta-primary h-anim-pulse-glow">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg>
+          <a href="https://rumble.com/c/TheJoshGuilloryShow/livestreams?e9s=src_v1_cbl"
+             target="_blank" rel="noopener noreferrer"
+             class="hero-cta-primary h-anim-pulse-glow">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
             Watch Latest Episode
           </a>
           <a href="#purpose" class="hero-cta-secondary">
             <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+              <path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
             </svg>
             Browse Episodes
           </a>
@@ -853,7 +880,7 @@
       <div class="video-wrapper">
         <div class="video-shadow-ring"></div>
         <div class="video-frame-wrap">
-          <iframe src="https://rumble.com/embed/v79d0rv/?pub=2p1m5c" frameborder="0" allowfullscreen="" title="The Josh Guillory Show - Featured Episode"></iframe>
+          <iframe src="https://www.youtube.com/embed?listType=user_uploads&list=JoshGuilloryShow" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="The Josh Guillory Show - Featured Episode"></iframe>
         </div>
       </div>
     </div>
@@ -895,7 +922,7 @@
       <div class="purpose-icon-box">🏛️</div>
       <div class="purpose-card-body">
         <span class="purpose-tag">Our Focus</span>
-        <h3>Local Government &amp; Policy</h3>
+        <h3>Local Government & Policy</h3>
         <p>We hold leaders accountable and provide in-depth coverage of local politics, economic development, and policies that directly impact your community.</p>
       </div>
     </div>
@@ -913,7 +940,7 @@
         <div class="host-portrait-ring">
           <img loading="lazy" decoding="async" src="Assets/images/Guests/Josh.png" alt="Josh Guillory">
         </div>
-        <div class="host-role-badge">Host &amp; Founder</div>
+        <div class="host-role-badge">Host & Founder</div>
       </div>
       <div class="host-info">
         <div class="host-meta">
@@ -977,7 +1004,7 @@
 <!-- WAVEFORM QUOTE -->
 <section id="waveform-quote">
   <svg class="waveform-svg" width="320" height="100" viewBox="0 0 320 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <style>.bar { transform-origin: center bottom; animation: wave-pulse var(--dur, 1s) ease-in-out infinite; } @keyframes wave-pulse { 0%, 100% { transform: scaleY(1); } 50% { transform: scaleY(0.3); } }</style>
+    <style>.bar { transform-origin: center bottom; animation: wave-pulse var(--dur, 1s) ease-in-out infinite; }</style>
     <rect class="bar" x="4" y="44" width="6" height="12" rx="3" fill="#B91C1C" style="--dur:1.2s;animation-delay:0.1s"></rect>
     <rect class="bar" x="14" y="40" width="6" height="20" rx="3" fill="#B91C1C" style="--dur:0.9s;animation-delay:0.3s"></rect>
     <rect class="bar" x="24" y="32" width="6" height="36" rx="3" fill="#B91C1C" style="--dur:1.4s;animation-delay:0.0s"></rect>
@@ -1026,7 +1053,7 @@
     <p class="cta-desc">Join thousands of listeners across Louisiana and beyond who tune in daily for straight talk, common sense, and real conversations about the issues that matter.</p>
     <div class="cta-buttons">
       <a href="https://rumble.com/c/TheJoshGuilloryShow/livestreams?e9s=src_v1_cbl" target="_blank" rel="noopener noreferrer" class="cta-btn-primary">▶ Watch on Rumble</a>
-      <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="cta-btn-secondary">▶ Watch on YouTube</a>
+      <a href="https://www.youtube.com/@JoshGuilloryShow" target="_blank" rel="noopener noreferrer" class="cta-btn-secondary">▶ Watch on YouTube</a>
     </div>
     <p class="cta-location">✦ Lafayette, Louisiana ✦</p>
   </div>
@@ -1041,10 +1068,10 @@
       <div class="footer-socials">
         <a href="https://rumble.com/c/TheJoshGuilloryShow/livestreams?e9s=src_v1_cbl" target="_blank" rel="noopener noreferrer" class="footer-social" title="Rumble">▶</a>
         <a href="https://facebook.com/thejoshguilloryshow/" target="_blank" rel="noopener noreferrer" class="footer-social" title="Facebook">f</a>
-        <a href="https://twitter.com/jguilloryshow" target="_blank" rel="noopener noreferrer" class="footer-social" title="X">𝕏</a>
-        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="footer-social" title="YouTube">▶</a>
-        <a href="https://instagram.com/joshguilloryshow/" target="_blank" rel="noopener noreferrer" class="footer-social" title="Instagram">◯</a>
-        <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="footer-social" title="TikTok">♫</a>
+        <a href="https://x.com/i/broadcasts/1eaKbWQqZOXGX" target="_blank" rel="noopener noreferrer" class="footer-social" title="X">𝕏</a>
+        <a href="https://www.youtube.com/@JoshGuilloryShow" target="_blank" rel="noopener noreferrer" class="footer-social" title="YouTube">▶</a>
+        <a href="https://www.instagram.com/joshguilloryshow/" target="_blank" rel="noopener noreferrer" class="footer-social" title="Instagram">◯</a>
+        <a href="https://www.tiktok.com/discover/the-josh-guillory-show" target="_blank" rel="noopener noreferrer" class="footer-social" title="TikTok">♫</a>
       </div>
     </div>
     <div class="footer-col">
@@ -1052,7 +1079,7 @@
       <div class="footer-divider red"></div>
       <ul>
         <li><a href="tel:+13373629797">+1 (337) 362-9797</a></li>
-        <li><a href="/cdn-cgi/l/email-protection#5d34333b321d29353837322e353a28343131322f242e35322a733e3230"><span class="__cf_email__" data-cfemail="82ebece4edc2f6eae7e8edf1eae5f7ebeeeeedf0fbf1eaedf5ace1edef">[email&nbsp;protected]</span></a></li>
+        <li><a href="/cdn-cgi/l/email-protection#5d34333b321d29353837322e353a28343131322f242e35322a733e3230"><span class="__cf_email__" data-cfemail="82ebece4edc2f6eae7e8edf1eae5f7ebeeeeedf0fbf1eaedf5ace1edef">[email&#160;protected]</span></a></li>
         <li><a href="#">203 W Brentwood Blvd<br>Lafayette, LA 70506</a></li>
       </ul>
     </div>
@@ -1080,7 +1107,7 @@
 
 <button id="scrollToTop" aria-label="Scroll back to top">
   <svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-    <polyline points="18 15 12 9 6 15"></polyline>
+    <polyline points="18 15 12 9 6 15"/>
   </svg>
 </button>
 
@@ -1156,5 +1183,5 @@
   })();
 
 </script>
-
-</body></html>
+</body>
+</html>
